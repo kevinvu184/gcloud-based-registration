@@ -15,6 +15,7 @@
   </script>
   </head>
   <body class="bg-light">
-    password
+    <div class="container-sm p-4 mt-5 bg-dark text-white">
+    </div>
   </body>
 </html>
