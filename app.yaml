@@ -1,22 +1,6 @@
-runtime: php55
-api_version: 1
+runtime: php
+env: flex
 
-handlers:
-- url: /login
-  script: www/login.php
-  
-- url: /name
-  script: www/name.php
-
-- url: /main
-  script: www/main.php
-
-- url: /password
-  script: www/password.php
-
-- url: /.*
-  script: www/login.php
-
-- url: /static/favicon\.ico
-  static_files: favicon.ico
-  upload: favicon\.ico
+runtime_config:
+  document_root: www
+  front_controller_file: login.php
