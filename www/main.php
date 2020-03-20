@@ -16,6 +16,8 @@
   </head>
   <body class="bg-light">
     <div class="container-sm p-4 mt-5 bg-dark text-white">
+        <button type="button" id="id" class="btn btn-warning btn-lg btn-block">Change ID</button>
+        <button type="button" id="pwd" class="btn btn-warning btn-lg btn-block">Change Password</button>
     </div>
   </body>
 </html>
