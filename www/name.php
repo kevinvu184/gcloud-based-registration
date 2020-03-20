@@ -15,7 +15,7 @@
   </script>
   </head>
   <body class="bg-light">
-    <form action="./main" class="container-sm p-4 mt-5 bg-dark text-white" method="post">
+    <form action="./main.php" class="container-sm p-4 mt-5 bg-dark text-white" method="post">
       <div class="form-group">
         <label for="id">New ID</label>
         <input type="text" class="form-control" placeholder="Enter new ID" name="id" required>
