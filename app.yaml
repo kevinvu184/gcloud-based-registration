@@ -16,3 +16,7 @@ handlers:
 
 - url: /.*
   script: www/login.php
+
+- url: /static/favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
