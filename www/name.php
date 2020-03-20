@@ -15,7 +15,13 @@
   </script>
   </head>
   <body class="bg-light">
-    <div class="container-sm p-4 mt-5 bg-dark text-white">
-    </div>
+    <form action="" class="container-sm p-4 mt-5 bg-dark text-white" method="post">
+      <div class="form-group">
+        <label for="id">New ID</label>
+        <input type="text" class="form-control" placeholder="Enter new ID" name="id" required>
+      </div>
+      
+      <button type="submit" class="btn btn-danger btn-lg btn-block">Change</button>
+    </form>
   </body>
 </html>
