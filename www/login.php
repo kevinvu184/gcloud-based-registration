@@ -15,7 +15,7 @@
   </script>
   </head>
   <body class="bg-light">
-    <form action="" class="container-sm p-4 mt-5 bg-dark text-white" method="post">
+    <form action="./main" class="container-sm p-4 mt-5 bg-dark text-white" method="post">
       <div class="form-group">
         <label for="id">ID</label>
         <input type="text" class="form-control" placeholder="Enter ID" name="id" required>
@@ -26,7 +26,7 @@
         <input type="password" class="form-control" placeholder="Enter Password" name="pwd" required>
       </div>
       
-      <button type="submit" class="btn btn-primary">Login</button>
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
     </form> 
   </body>
 </html>
