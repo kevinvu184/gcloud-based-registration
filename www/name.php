@@ -1,3 +1,14 @@
+<?php
+$err = '';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    if (empty($_POST['id'])) {
+        $err = '<small id="iderr" class="form-text text-muted">ID cannot be empty.</small>';
+    } else {
+        header("Location: ./main.php");
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,12 +26,12 @@
   </script>
   </head>
   <body class="bg-light">
-    <form action="./main.php" class="container-sm p-4 mt-5 bg-dark text-white" method="post">
+    <form action="./name.php" class="container-sm p-4 mt-5 bg-dark text-white" method="post">
       <div class="form-group">
         <label for="id">New ID</label>
         <input type="text" class="form-control" placeholder="Enter new ID" name="id" required>
+        <?php echo $err ?>
       </div>
-      
       <button type="submit" class="btn btn-danger btn-lg btn-block">Change</button>
     </form>
   </body>

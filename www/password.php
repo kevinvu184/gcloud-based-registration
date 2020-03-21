@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,6 +22,11 @@
       <div class="form-group">
         <label for="pwd">New Password</label>
         <input type="text" class="form-control" placeholder="Enter new Password" name="pwd" required>
+      </div>
+
+      <div class="form-group">
+        <label for="opwd">Old Password</label>
+        <input type="text" class="form-control" placeholder="Enter old Password" name="opwd" required>
       </div>
       
       <button type="submit" class="btn btn-danger btn-lg btn-block">Change</button>

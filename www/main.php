@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,8 +19,10 @@
   </head>
   <body class="bg-light">
     <div class="container-sm p-4 mt-5 bg-dark text-white">
+        <div class="jumbotron text-dark"><h1 class="display-4">Welcome back Kevin Vu !</h1></div>
         <a href="./name.php" id="id" class="btn btn-warning btn-lg btn-block">Change ID</a>
         <a href="./password.php" id="pwd" class="btn btn-warning btn-lg btn-block">Change Password</a>
+        <a href="./login.php" id="back" class="btn btn-danger btn-lg btn-block">Log Out</a>
     </div>
   </body>
 </html>
