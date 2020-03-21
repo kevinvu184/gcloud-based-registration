@@ -1,0 +1,57 @@
+{
+  "updateTime": "2020-02-13T10:59:45.409855Z",
+  "sources": [
+    {
+      "git": {
+        "name": ".",
+        "remote": "https://github.com/googleapis/google-cloud-php.git",
+        "sha": "3adb76e84fabff79f6fd66b353ea45871194bd46"
+      }
+    },
+    {
+      "git": {
+        "name": "synthtool",
+        "remote": "rpc://devrel/cloud/libraries/tools/autosynth",
+        "sha": "dd7cd93888cbeb1d4c56a1ca814491c7813160e8"
+      }
+    },
+    {
+      "generator": {
+        "name": "artman",
+        "version": "0.45.0",
+        "dockerImage": "googleapis/artman@sha256:6aec9c34db0e4be221cdaf6faba27bdc07cfea846808b3d3b964dfce3a9a0f9b"
+      }
+    },
+    {
+      "git": {
+        "name": "googleapis",
+        "remote": "https://github.com/googleapis/googleapis.git",
+        "sha": "0646bc775203077226c2c34d3e4d50cc4ec53660",
+        "internalRef": "294809380",
+        "log": "0646bc775203077226c2c34d3e4d50cc4ec53660\nRemove unnecessary languages from bigquery-related artman configuration files.\n\nPiperOrigin-RevId: 294809380\n\n8b78aa04382e3d4147112ad6d344666771bb1909\nUpdate backend.proto for schemes and protocol\n\nPiperOrigin-RevId: 294788800\n\n80b8f8b3de2359831295e24e5238641a38d8488f\nAdds artman config files for bigquerystorage endpoints v1beta2, v1alpha2, v1\n\nPiperOrigin-RevId: 294763931\n\n2c17ac33b226194041155bb5340c3f34733f1b3a\nAdd parameter to sample generated for UpdateInstance. Related to https://github.com/googleapis/python-redis/issues/4\n\nPiperOrigin-RevId: 294734008\n\nd5e8a8953f2acdfe96fb15e85eb2f33739623957\nMove bigquery datatransfer to gapic v2.\n\nPiperOrigin-RevId: 294703703\n\nefd36705972cfcd7d00ab4c6dfa1135bafacd4ae\nfix: Add two annotations that we missed.\n\nPiperOrigin-RevId: 294664231\n\n8a36b928873ff9c05b43859b9d4ea14cd205df57\nFix: Define the \"bigquery.googleapis.com/Table\" resource in the BigQuery Storage API (v1beta2).\n\nPiperOrigin-RevId: 294459768\n\nc7a3caa2c40c49f034a3c11079dd90eb24987047\nFix: Define the \"bigquery.googleapis.com/Table\" resource in the BigQuery Storage API (v1).\n\nPiperOrigin-RevId: 294456889\n\n"
+      }
+    }
+  ],
+  "destinations": [
+    {
+      "client": {
+        "source": "googleapis",
+        "apiName": "bigtable",
+        "apiVersion": "v2",
+        "language": "php",
+        "generator": "gapic",
+        "config": "google/bigtable/artman_bigtable.yaml"
+      }
+    },
+    {
+      "client": {
+        "source": "googleapis",
+        "apiName": "bigtable-admin",
+        "apiVersion": "v2",
+        "language": "php",
+        "generator": "gapic",
+        "config": "google/bigtable/admin/artman_bigtableadmin.yaml"
+      }
+    }
+  ]
+}
