@@ -19,7 +19,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else if (isset($_POST['pwd'])) {
         header("Location: ./password.php");
     } else if (isset($_POST['back'])) {
+        var_dump($_COOKIE['auth']);
         unset($_COOKIE['auth']);
+        setcookie('auth', null, -1, '/');
+        var_dump($_COOKIE['auth']);
         header("Location: ./login.php");
     }
 }

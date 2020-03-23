@@ -1,8 +1,10 @@
 <?php
 require '../vendor/autoload.php';
-if (!empty($_COOKIE['auth'])) {
+if (isset($_COOKIE['auth'])) {
     header("Location: ./main.php");
 }
+
+$err = '';
 
 # Create connection to gcloud datastore (NoSQL db) 
 use Google\Cloud\Datastore\DatastoreClient;
