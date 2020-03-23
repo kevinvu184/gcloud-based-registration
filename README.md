@@ -16,3 +16,17 @@ GCloud Based Authentication System is a web application simulate a simple authen
 - Deploy Platform: **Google App Engine Flexible**
 - Other Cloud Services:
   - **Google Cloud Shell + Text Editor**
+
+## Setting Up
+- Create a new Google CLoud Project
+- Create Datastore instance and mock entities
+  - Mock entities properties: Kind:user, id (Type: Key), name (Type: String), password (Type: Integer)
+  - ![Imgur](https://i.imgur.com/hb0QtO1.png)
+- Activate a Cloud Shell session
+  - `Open in new window` to access Google Cloud Shell Text Editor
+  - `gcloud config set project [PROJECT_ID]` to access correct project
+- `git clone https://github.com/kevinvu184/GcloudBasedRegistration.git`
+- `cd GcloudBasedRegistration/`
+- `php -S localhost:8080 -t www/`
+- `dev_appserver.py ./ --php_executable_path=/usr/bin/php-cgi`
+- `gcloud app deploy`
