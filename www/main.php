@@ -20,7 +20,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else if (isset($_POST['pwd'])) {
         header("Location: ./password.php");
     } else if (isset($_POST['back'])) {
-        session_reset();
+        unset($_SESSION['id']);
+        session_destroy();
         header("Location: ./login.php");
     }
 }
