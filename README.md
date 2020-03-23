@@ -27,6 +27,6 @@ GCloud Based Authentication System is a web application simulate a simple authen
   - `gcloud config set project [PROJECT_ID]` to access correct project
 - `git clone https://github.com/kevinvu184/GcloudBasedRegistration.git`
 - `cd GcloudBasedRegistration/`
-- `php -S localhost:8080 -t www/`
-- `dev_appserver.py ./ --php_executable_path=/usr/bin/php-cgi`
-- `gcloud app deploy`
+- Dev server (flex) `php -S localhost:8080 -t www/`
+  - Dev server (std) `dev_appserver.py ./ --php_executable_path=/usr/bin/php-cgi`
+- Deployment `gcloud app deploy`
