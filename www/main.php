@@ -1,7 +1,6 @@
 <?php
-session_start ();
 require '../vendor/autoload.php';
-if (empty($_SESSION['id'])) {
+if (empty($_COOKIE['auth'])) {
     header("Location: ./login.php");
 }
 
@@ -9,7 +8,7 @@ if (empty($_SESSION['id'])) {
 use Google\Cloud\Datastore\DatastoreClient;
 $datastore = new DatastoreClient();
 
-$id = $_SESSION['id'];
+$id = $_COOKIE['auth'];
 $key = $datastore->key('user', $id);
 $user = $datastore->lookup($key);
 $name = $user['name'];
@@ -20,8 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else if (isset($_POST['pwd'])) {
         header("Location: ./password.php");
     } else if (isset($_POST['back'])) {
-        unset($_SESSION['id']);
-        session_destroy();
+        unset($_COOKIE['auth']);
         header("Location: ./login.php");
     }
 }

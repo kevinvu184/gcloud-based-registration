@@ -1,6 +1,8 @@
 <?php
-session_start ();
 require '../vendor/autoload.php';
+if (!empty($_COOKIE['auth'])) {
+    header("Location: ./main.php");
+}
 
 # Create connection to gcloud datastore (NoSQL db) 
 use Google\Cloud\Datastore\DatastoreClient;
@@ -19,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $user = $datastore->lookup($key);
 
         if ($user['password'] == $pwd) {
-            $_SESSION['id'] = $id;
+            setcookie('auth', $id, time() + (86400 * 30), "/");
             header("Location: ./main.php");
         }
 
